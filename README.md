@@ -12,8 +12,11 @@ Absolute Visual Magnitude of the star. The program will also find other attribut
 
 ### Physics Equations to Use:
 Surface Area of Star = 4pi * r^2
+
 Volume of Star = 4/3 * pi * r^3
+
 Wien's Displacement Law
+
 Stefan-Boltzmann's Law
 
 ### Program Performance and Display
