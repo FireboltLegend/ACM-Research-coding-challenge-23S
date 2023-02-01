@@ -38,11 +38,11 @@ Physics Laws, this program can conduct a search through the list with given inpu
 
 >Psudecode:
 >```
-    function deriveEq (value to find, input1, input 2, ...)
-	foreach index in eqList:
-		if (index.contains(value to find, input1, input 2, ...)):
-			return index
-		else if (index.contains(value to find + "=") || index.contains(input1 + "=") || index.contains(input2 + "=") || ...):
-			index
-	return "No Derivable Equation Found"
+>    function deriveEq (value to find, input1, input 2, ...)
+>	foreach index in eqList:
+>		if (index.contains(value to find, input1, input 2, ...)):
+>			return index
+>		else if (index.contains(value to find + "=") || index.contains(input1 + "=") || index.contains(input2 + "=") || ...):
+>			index
+>	return "No Derivable Equation Found"
 >```
