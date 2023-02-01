@@ -1,69 +1,47 @@
 # ACM Research coding challenge (Spring 2023)
 
-![image](https://user-images.githubusercontent.com/72369124/211179527-0ee60624-2794-4e13-bf7f-f88b5c950e44.png)
+### Brainstorming and Background Knowledge:
+Looking at this data, and given it's a .csv (Comma-Separated Values) file, I would use Python to read the data. In HackUTD the project my group worked on was taking
+UTD Grades professor data, stored in .csv files and combining it with the results of a professor on RateMyProfessor.com all in one screen as many students use both
+websites when searching for professors for their classes. This was all done in Python, though the project itself was incomplete by the end of the event. But I learned
+about Python's many applications in file reading and writing.
 
-## IMPORTANT: Make sure to create a fork of this repo and share the link on your ACM Research Application Typeform submission. The coding challenge does not have to be completed at the time of you submitting the Typeform application (unless you completed the application last minute!)
+### Plan:
+With the data about the stars, I will write a Python program that prompts the user to enter a star type and returns the average Temperature, Luminosity, Radius, and
+Absolute Visual Magnitude of the star. The program will also find other attributes of the star using Physics equations (which utilize the averages the 4 given attributes) and display that information back to the user.
 
-Note: If it's getting down to the deadline (February 1st at 11:59 PM CST) and you don't think you will be able to finish your project on time, just complete whatever you have! Please do not work on the challenge after the deadline, but if you do need a few extra hours, make sure your challenge is done before interviews begin tomorrow (Feb 2nd).
+### Physics Equations to Use:
+Surface Area of Star = 4pi * r^2
+Volume of Star = 4/3 * pi * r^3
+Wien's Displacement Law
+Stefan-Boltzmann's Law
 
-This semester's challenge is especially open-ended. [Please refer to this dataset](https://www.kaggle.com/datasets/deepu1109/star-dataset) on Kaggle called "Star dataset to predict star types".  It contains information about 240 stars and various properties taken from "Stars and Galaxies" by Seeds and Backman. Each row contains 7 pieces of information about a star, such as its temperature, luminosity, radius, absolute magnitude, star type, star color, and spectral class.
+### Program Performance and Display
+The program runs well utilizing 4 functions and returns information on the average Temperature, Luminosity, Radius, and Absolute Visual Magnitude along with the average
+Wavelength Peak and Black-Body Radiant Emittance using Wien's Displacement Law and Stefan-Boltzmann's Law respectively. Additionally, the program calculates the surface
+area and volume of the star using the equations for a sphere, though stars are not exact sphereical object, but resemble closely to them.
 
-Please note that the star type, denoted as integers, are translated as the following:
-- Brown Dwarf -> Star Type = 0
-- Red Dwarf -> Star Type = 1
-- White Dwarf -> Star Type = 2
-- Main Sequence -> Star Type = 3
-- Supergiant -> Star Type = 4
-- Hypergiant -> Star Type = 5
+The display of the information is pretty simple. Lines (---) are used to separate different sections of information. Each value has its respective unit of measurement.
+Overall the program completes the basic goals I had with this challenge.
 
----
+### Extra Features/Missed Opportunities
+There are more Physics equations that can be used with the found information. While searching through different Physics equations, it was difficult to find values that
+could be found with the already found inputs. Wien's Displacement Law and Stefan-Boltzmann's Law were the only immediate equations that could be used. However, there
+exists derivable equations that contain just the found inputs. And if this program is to go futher in displaying information about each star to the user, it needs to
+utilize those derivable equations.
 
-## INSTRUCTIONS: Please read this carefully, do not skim this!
+Additionally there is the opportunity to write another program that returns derivable Physics equations for use in the main program. Utilizing a list of all existing
+Physics Laws, this program can conduct a search through the list with given inputs or attempt to derive and equation with the given inputs.
 
-### Here's the coding challenge: **What can you do with all of this data?** Yes, this is an **OPEN-ENDED** question and your answer should be a brief report, showcasing your skills. Can you find a pattern, answer a question, or create a visualization? In case nothing comes to mind, here are some ideas, with varying complexity:
-
-- What is the most common star type in the data?
-- What common patterns do you notice between any two properties? Ex: Is there a relationship between the star color and temperature?
-- What properties are the most influential in classifying a star's type?
-- Can you make a similar graph as the one shown in Kaggle to showcase the data as a Hertzsprung-Russell Diagram?
-- Train a machine learning model to then predict the star type of a row of data (without the star type field) and find the model's accuracy.
-Bonus: Can you find the row of data that most closely resembles our star, the Sun?
-
-However, we strongly encourage you to come up with your own problem to solve! This is for you to showcase your skills!
-
-You can use any programming language, framework, or library you want, but we recommend [creating a notebook in Kaggle](https://www.kaggle.com/docs/notebooks) and using Python. This will run in your browser, interlaces code with documentation, allows you to import the Stars dataset easily by pressing the "Add data" button, and gives you access to Python's high-quality, high-level libraries for working with data. [Learn more about data science in Python.](https://www.w3schools.com/datascience/ds_python.asp)
-
----
-
-## How to create your solution repo **(COMPLETE STEPS #1 and #2 BEFORE YOU SUBMIT YOUR APPLICATION, AND PUT THE LINK IN THE APPLICATION)**
-
-1. [Create a **public** fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) of this repository and name it  `ACM-Research-coding-challenge-23S` (click the "Fork" button in the top right).
-
-2. Put the link to your fork in your ACM Research application in the question where it asks to do so. **This can just be a empty repo as you have until February 2 to work on your coding challenge in this repository**
-
-3. Replace this README file with a description ([written in Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/about-writing-and-formatting-on-github)) of your solution. Regardless of your success, describe the problem you set out to solve and how you did it. Split it up into sections with headers, and, if relevant, include figures.
-
-4. Make sure to include all relevant files in your fork. If you made the project in a Kaggle notebook, click **File** → **Download Notebook** to download it as an `.ipynb` file.
-
-4. You may have to "clone" the fork you made to edit files locally on your computer and "push" them to GitHub. Learn how to do that [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
-
-5. Make sure your GitHub repo has everything important, including your report, any code you used, graphs, etc. You should not be working on this after the deadline (Feb 2).
-
-
-## No collaboration policy
-
-**You may not collaborate with anyone on this challenge.** You _are_ allowed (and encouraged) to use internet documentation. If you use existing code (either from Github, Stack Overflow, or other sources), **please cite your sources in the README**.
-
-## Timing
-
-Please don't spend too long on this project: **60 to 90 minutes** is reasonable. It's okay to put more time into your submission than that, but we don't expect you to get that much done; we really don't want this challenge to be a burden!
-
-If you're *completely new* to this kind of project, however, it will likely take you more than 90 minutes. This is a *densely useful* project to go through (you will learn a lot), so we believe this is justified.
-
-## Assessment criteria
-
-Submissions will be evaluated holistically, in combination with the rest of your application. We will consider your effort, use of external resources, how you approached the problem, and presentation, among other considerations.
-
-## Support and questions
-
-Feel free to ask for clarifications in the #research-qna channel in the [ACM UTD Discord server](https://discord.gg/nJxRdKdG4d)! You can also directly message ACM Research Co-Directors Pranav Nair or Sisi Aarukapalli-Rose on the ACM Discord server.
+>Psudecode:
+>```
+{
+    function deriveEq (value to find, input1, input 2, ...)
+	foreach index in eqList:
+		if (index.contains(value to find, input1, input 2, ...)):
+			return index
+		else if (index.contains(value to find + "=") || index.contains(input1 + "=") || index.contains(input2 + "=") || ...):
+			index
+	return "No Derivable Equation Found"
+}
+```
